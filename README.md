@@ -48,8 +48,7 @@ GET TAG ALBUM    `get_tag_album($tagName)`    Description: Displays a single tag
 GET MEDIATAG BY TAGS    `get_mediatag_by_tags($tagNames, $limit = 18, $showmore = true, $showtitle = true)`    Description: Displays the set of images based on the tag(s) requested.    Usage: `<?php get_mediatag_by_tags('weddings,automobilia,wildlife,architecture,people,landscape', 6, 'show-no-more'); ?>`    Args:<br />
 $tagNames (array) - an array of tag names - required    $limit (int) - a limit of the number of items that display - default is 18    $showmore (string) - show the load more button - default is true - set to 'show no more' to remove the button    $showtitle (boolean) - whether or not to show the image title - default is true - set to false to remove the title
 
-GENERATE MEDIATAG RANDOM IMAGE URL
-`generate_mediatag_random_image_url($tagNames, $size)`    
+GENERATE MEDIATAG RANDOM IMAGE URL        `generate_mediatag_random_image_url($tagNames, $size)`    
 Description: Generate a random image from declared media tag(s).    
 Usage: `<?php generate_mediatag_random_image_url('weddings,automobilia,wildlife', 'large'); ?>`
 Args:    $tagNames (array) - an array of tag names - required    $size (string) - Size of image [thumbnail, medium, large, full] 
