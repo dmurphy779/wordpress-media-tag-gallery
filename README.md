@@ -20,7 +20,7 @@ great you gallery. No need for bloated image gallery plugins that just become ou
 
 ## Installation
 
-1. Download and install the Media Tags plugin here: *[Media Tags](https://wordpress.org/plugins/media-tags/ "Media Tags")*
+1. Download and install the Media Tags plugin here:<br />*[Media Tags](https://wordpress.org/plugins/media-tags/ "Media Tags")*
 2. Upload the Media Tag Gallery plugin files to the `/wp-content/plugins/plugin-name` directory, or install the 
 plugin through the WordPress plugins screen directly.
 3. Activate the plugin through the 'Plugins' screen in WordPress
@@ -29,13 +29,12 @@ plugin through the WordPress plugins screen directly.
 ### Template Setup
 
 1. Inject the modal popup via ajax: After you have installed both Media Tags and Media add the following code below 
-the body tag but within your template's header.php file:    `<div id="load_popup_modal_show_id" class="modal fade" tabindex="-1"></div>`
-
+the body tag but within your template's header.php file:<br />
+`<div id="load_popup_modal_show_id" class="modal fade" tabindex="-1"></div>`
 2. Within the root of your template, add a file named `taxomonomy-media-tags.php`. 
 3. Copy the code within the `category.php` file and paste the code in the `taxonomy-media-tags.php` file (this is required to display albums using the Media Tags taxonomy)
-4. Within the body of the `taxonomy-media-tags.php` file, insert the code below:    `<?php 
-$current_tag_category = single_cat_title("", false);
-get_mediatag_by_tags($current_tag_category,18); // display 18 images
+4. Within the body of the `taxonomy-media-tags.php` file, insert the code below:<br />`<?php $current_tag_category = single_cat_title("", false);    
+get_mediatag_by_tags($current_tag_category,18); // display 18 images    
 ?>`
 5. Upload media
 6. Add Media Tags to media: Within the Media Manager, click on an image. Click the "Edit more details" link. To the 
