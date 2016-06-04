@@ -1,4 +1,4 @@
-# Wordpress Media Tag Gallery
+# Media Tagz Gallery for Wordpress
 A Wordpress media tag gallery that extends the Media Tags plugin.
 
 *[Media Tags](https://wordpress.org/plugins/media-tags/ "Media Tags")* is a great plugin that allows you to add 
