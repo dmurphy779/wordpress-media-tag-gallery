@@ -45,12 +45,12 @@ right you will see a "Media Tags" section where you can add tags. You can assign
 
 ### Shortcodes
 
-TAG ALBUM
+TAG ALBUM<br />
 `[tagz-album tag=landscape]`
 Attributes:<br />
 - tag: (string) tag of album to be displayed - shows the most recent image in the tag set as cover image
 
-TAG GALLERY
+TAG GALLERY<br />
 `[tagz-gallery tags=landscape,wildlife limit=18 show-more=true show-title=true]`
 Attributes:<br />
 - tags: (array|string) media tags
@@ -58,7 +58,7 @@ Attributes:<br />
 - show-more: (string) set to "true" if you want to display the show more button - set to "no-more" if you wish to remove this button
 - show-title: (string) set to "true" if you want to display the image title - set to "no-title" if you wish to not show the image title
 
-GENERATE MEDIATAG RANDOM IMAGE URL
+GENERATE MEDIATAG RANDOM IMAGE URL<br />
 `[tagz-rand-img tags=landscape,wildlife size=thumbnail]`
 Attributes:<br />
 - tags: (array|string) media tags
