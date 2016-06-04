@@ -43,32 +43,25 @@ echo tagz_get_media_by_tags($current_tag_category,18); // display 18 images max
 6. Add Media Tags to media: Within the Media Manager, click on an image. Click the "Edit more details" link. To the 
 right you will see a "Media Tags" section where you can add tags. You can assign more than one media tag if you would like the image to show in multiple "Galleries".
 
-### Functions
+### Shortcodes
 
-GET TAG ALBUM<br />
-`get_tag_album($tagName)`<br />
-Description: Displays a single tag's latest image (album) based on the tag called. The album's image links to a page with the tag's image set using the `taxonomy-media-tags.php` file.<br />
-Usage: `<?php get_tag_album('wildlife'); ?>`<br />
-Args:<br />
-$tagName (string) - a single tag name    
+TAG ALBUM
+`[tagz-album tag=landscape]`
+Attributes:<br />
+- tag: (string) tag of album to be displayed - shows the most recent image in the tag set as cover image
 
-GET MEDIATAG BY TAGS<br />
-`get_mediatag_by_tags($tagNames, $limit = 18, $showmore = true, $showtitle = true)`<br />
-Description: Displays the set of images based on the tag(s) requested.<br />
-Usage: `<?php get_mediatag_by_tags('weddings,automobilia,wildlife,architecture,people,landscape', 6, 'show-no-more'); ?>`<br />
-Args:<br />
-$tagNames (array) - an array of tag names - required<br />
-$limit (int) - a limit of the number of items that display - default is 18<br />
-$showmore (string) - show the load more button - default is true - set to 'show no more' to remove the button<br />
-$showtitle (boolean) - whether or not to show the image title - default is true - set to false to remove the title<br />
+TAG GALLERY
+`[tagz-gallery tags=landscape,wildlife limit=18 show-more=true show-title=true]`
+Attributes:<br />
+- tags: (array|string) media tags
+- limit: (int) limit of images to be displayed in the gallery
+- show-more: (string) set to "true" if you want to display the show more button - set to "no-more" if you wish to remove this button
+- show-title: (string) set to "true" if you want to display the image title - set to "no-title" if you wish to not show the image title
 
-GENERATE MEDIATAG RANDOM IMAGE URL<br />
-`generate_mediatag_random_image_url($tagNames, $size)`<br />
-Description: Generate a random image from declared media tag(s).<br />
-Usage: `<?php generate_mediatag_random_image_url('weddings,automobilia,wildlife', 'large'); ?>`<br />
-Args:<br />
-$tagNames (array) - an array of tag names - required<br />
-$size (string) - Size of image [thumbnail, medium, large, full]<br />
+GENERATE MEDIATAG RANDOM IMAGE URL
+`[tagz-rand-img tags=landscape,wildlife size=thumbnail]`
+Attributes:<br />
+- tags: (array|string) media tags
 
 ## Frequently Asked Questions
 
@@ -76,11 +69,10 @@ Q&A coming soon. (As I get questions)
 
 ## Changelog
 
-** 1.0 **
-- * Hello world! * Hello world! - The first appearance of the Media Tag Gallery!
+** 1.1 **
+* Added shortcode functionality
+* Security fixes - filtered post variables
 
-## Upgrade Notice
-
 ** 1.0 **
-No upgrades yet - more to come!
+* Hello world! - The first appearance of the Media Tag Gallery!
 
